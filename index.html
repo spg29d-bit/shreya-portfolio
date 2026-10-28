@@ -3,179 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shreya Gupta | Data Analyst Portfolio</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
+background:#0f172a;
+color:#ffffff;
+line-height:1.6;
 }
 
 header{
-background:#0A66C2;
-color:white;
+background:linear-gradient(135deg,#0f172a,#1e293b);
 padding:60px 20px;
 text-align:center;
 }
 
-header h1{
-font-size:48px;
-margin-bottom:10px;
+.profile-pic{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #38bdf8;
+object-fit:cover;
 }
 
-header p{
+h1{
+font-size:45px;
+margin-top:20px;
+}
+
+.subtitle{
 font-size:20px;
+color:#38bdf8;
+margin-top:10px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:white;
-color:#0A66C2;
+background:#38bdf8;
+color:black;
+padding:12px 20px;
+margin:10px;
 text-decoration:none;
-border-radius:5px;
+border-radius:8px;
 font-weight:bold;
+transition:0.3s;
 }
 
-section{
+.btn:hover{
+background:#0ea5e9;
+}
+
+.container{
+width:90%;
 max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:40px 0;
 }
 
 .card{
-background:white;
+background:#1e293b;
 padding:25px;
-margin-bottom:20px;
-border-radius:12px;
-box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+margin-bottom:25px;
+border-radius:15px;
+box-shadow:0px 4px 20px rgba(0,0,0,0.3);
 }
 
-h2{
-color:#0A66C2;
-margin-bottom:15px;
+.section-title{
+color:#38bdf8;
+margin-bottom:20px;
 }
 
 .skills{
 display:flex;
 flex-wrap:wrap;
-gap:10px;
+gap:15px;
 }
 
 .skill{
-background:#0A66C2;
-color:white;
-padding:10px 15px;
-border-radius:20px;
+background:#38bdf8;
+color:#000;
+padding:10px 18px;
+border-radius:30px;
+font-weight:bold;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
 .project{
+background:#0f172a;
+padding:15px;
+border-radius:12px;
+border:1px solid #334155;
+}
+
+.project img{
+width:100%;
+border-radius:10px;
 margin-bottom:15px;
 }
 
 footer{
-background:#222;
-color:white;
 text-align:center;
-padding:20px;
+padding:25px;
+background:#020617;
 margin-top:30px;
 }
+
+.contact p{
+margin-bottom:10px;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Shreya Gupta</h1>
-<p>Data Analyst | SQL | Power BI | Tableau | Excel</p>
 
-<a href="#" class="btn">Download Resume</a>
+<img src="profile.jpg" class="profile-pic" alt="Profile Photo">
+
+<h1>Shreya Gupta</h1>
+
+<p class="subtitle">
+Data Analyst | SQL | Power BI | Tableau | Excel | Python
+</p>
+
+<a href="resume.pdf" target="_blank" class="btn">
+📄 Download Resume
+</a>
+
+<a href="https://www.linkedin.com/" target="_blank" class="btn">
+LinkedIn
+</a>
+
+<a href="https://github.com/spg29d-bit" target="_blank" class="btn">
+GitHub
+</a>
+
 </header>
 
-<section>
+<div class="container">
 
 <div class="card">
-<h2>About Me</h2>
+
+<h2 class="section-title">About Me</h2>
 
 <p>
-Data Analyst skilled in SQL, Excel, Power BI, Tableau, and Python. Passionate about transforming raw data into meaningful business insights and building interactive dashboards that support data-driven decision making.
+Data Analyst with hands-on experience in SQL, Tableau, Power BI, Python, and Advanced Excel.
+Experienced in data cleaning, dashboard creation, reporting, and business analysis.
+Passionate about turning data into actionable business insights.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>Technical Skills</h2>
+<h2 class="section-title">Technical Skills</h2>
 
 <div class="skills">
+
 <div class="skill">SQL</div>
-<div class="skill">Excel</div>
 <div class="skill">Power BI</div>
 <div class="skill">Tableau</div>
+<div class="skill">Excel</div>
 <div class="skill">Python</div>
 <div class="skill">Data Cleaning</div>
-<div class="skill">Data Visualization</div>
 <div class="skill">Dashboard Development</div>
+<div class="skill">Business Analytics</div>
+
 </div>
 
 </div>
 
 <div class="card">
 
-<h2>Projects</h2>
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
 
 <div class="project">
 <h3>Netflix Data Analysis</h3>
-<p>Analyzed Netflix content trends using SQL queries, aggregations, filters, and visualizations.</p>
+
+<p>
+Analyzed Netflix content data using SQL, GROUP BY, CASE WHEN, LIKE, ORDER BY and aggregate functions.
+</p>
 </div>
 
 <div class="project">
 <h3>Call Center Dashboard</h3>
-<p>Created Power BI dashboard for KPI monitoring including Calls Handled, AHT, and CSAT.</p>
+
+<p>
+Created an interactive Power BI dashboard to track AHT, CSAT, Calls Handled and Team Performance.
+</p>
 </div>
 
 <div class="project">
 <h3>Uber Ride Analysis</h3>
-<p>Performed ride trend analysis and created business insights using SQL and Power BI.</p>
+
+<p>
+Performed ride trend analysis, customer behavior analysis and peak demand reporting using SQL.
+</p>
+</div>
+
 </div>
 
 </div>
 
 <div class="card">
 
-<h2>Certifications</h2>
+<h2 class="section-title">Education</h2>
+
+<p><strong>M.Sc. Fashion & Design</strong></p>
+<p>Asian Academy of Film & Technology</p>
+
+<br>
+
+<p><strong>B.Sc. Home Science</strong></p>
+<p>Banasthali Vidyapith, Jaipur</p>
+
+</div>
+
+<div class="card">
+
+<h2 class="section-title">Certifications</h2>
 
 <ul>
+
+<li>Data Analytics Specialist (Pursuing)</li>
 <li>SQL for Data Analytics</li>
 <li>Power BI Fundamentals</li>
-<li>Tableau Desktop Basics</li>
-<li>Advanced Excel</li>
+<li>Tableau Fundamentals</li>
+
 </ul>
 
 </div>
 
-<div class="card">
+<div class="card contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact Me</h2>
 
-<p>Email: your-email@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/shreya-gupta</p>
-<p>GitHub: github.com/shreyagupta</p>
+<p>📧 sgp29d@gmail.com</p>
+
+<p>📱 7827041546</p>
+
+<p>📍 Noida, Uttar Pradesh, India</p>
 
 </div>
 
-</section>
+</div>
 
 <footer>
+
 <p>© 2026 Shreya Gupta | Data Analyst Portfolio</p>
+
 </footer>
 
 </body>
