@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shreya Gupta | Data Analyst Portfolio</title>
 
 <style>
@@ -13,45 +12,55 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
-color:white;
-line-height:1.6;
+background:#0a192f;
+color:#e6edf3;
+line-height:1.7;
 }
 
-header{
-min-height:100vh;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HERO */
+
+.hero{
+min-height:70vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:50px;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-}
-
-.hero{
-max-width:900px;
+padding:60px 20px;
+background:linear-gradient(135deg,#0a192f,#112240);
 }
 
 .hero img{
-width:180px;
-height:180px;
-object-fit:cover;
+width:170px;
+height:170px;
 border-radius:50%;
-border:4px solid #38bdf8;
+object-fit:cover;
+border:4px solid #64ffda;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:52px;
+color:#ffffff;
 margin-bottom:10px;
 }
 
 .hero h2{
-color:#38bdf8;
+font-size:24px;
+font-weight:500;
+color:#64ffda;
 margin-bottom:20px;
 }
 
@@ -59,101 +68,143 @@ margin-bottom:20px;
 max-width:700px;
 margin:auto;
 font-size:18px;
-opacity:0.9;
+color:#ccd6f6;
 }
 
-.btn-container{
+.buttons{
 margin-top:30px;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
-margin:10px;
-background:#38bdf8;
-color:#000;
-text-decoration:none;
-font-weight:bold;
+padding:12px 24px;
+margin:8px;
 border-radius:30px;
+text-decoration:none;
+font-weight:600;
 transition:.3s;
+}
+
+.primary{
+background:#64ffda;
+color:#0a192f;
+}
+
+.secondary{
+border:1px solid #64ffda;
+color:#64ffda;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-background:white;
 }
 
+/* SECTION */
+
 section{
-padding:80px 10%;
+padding:60px 0;
 }
 
 .section-title{
+font-size:38px;
 text-align:center;
-font-size:2.3rem;
-margin-bottom:40px;
-color:#38bdf8;
+margin-bottom:35px;
+color:#64ffda;
 }
+
+/* ABOUT */
 
 .about{
-background:#111827;
-border-radius:15px;
+background:#112240;
 padding:30px;
+border-radius:18px;
+font-size:18px;
 }
 
+/* SKILLS */
+
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
 }
 
 .skill{
-background:#1e293b;
-padding:20px;
-text-align:center;
-border-radius:12px;
-font-weight:bold;
-border:1px solid #334155;
+background:#112240;
+padding:12px 20px;
+border-radius:30px;
+font-weight:600;
+border:1px solid rgba(255,255,255,.1);
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:25px;
+/* DASHBOARDS */
+
+.dashboard{
+margin-bottom:70px;
 }
 
-.project{
-background:#1e293b;
-padding:20px;
-border-radius:15px;
-border:1px solid #334155;
-transition:.3s;
+.dashboard h3{
+font-size:32px;
+margin-bottom:20px;
+color:#ffffff;
 }
 
-.project:hover{
-transform:translateY(-5px);
-}
-
-.project img{
+.dashboard img{
 width:100%;
-border-radius:12px;
-margin-bottom:15px;
+border-radius:18px;
+display:block;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
-.project h3{
-color:#38bdf8;
-margin-bottom:10px;
+.dashboard p{
+margin-top:20px;
+font-size:17px;
+color:#ccd6f6;
 }
 
-.project ul{
-padding-left:20px;
-margin-top:10px;
+.tech-tags{
+margin-top:15px;
 }
+
+.tech-tags span{
+display:inline-block;
+background:#64ffda;
+color:#0a192f;
+padding:8px 14px;
+margin:4px;
+border-radius:20px;
+font-weight:600;
+font-size:14px;
+}
+
+/* OTHER PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.project-card{
+background:#112240;
+padding:25px;
+border-radius:16px;
+}
+
+.project-card h4{
+margin-bottom:12px;
+font-size:22px;
+color:#64ffda;
+}
+
+/* CONTACT */
 
 .contact{
+background:#112240;
+padding:30px;
+border-radius:18px;
 text-align:center;
-background:#111827;
-border-radius:15px;
-padding:40px;
 }
 
 .contact p{
@@ -161,20 +212,32 @@ margin:10px 0;
 font-size:18px;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
-padding:20px;
-background:#020617;
+padding:30px;
+color:#8892b0;
+border-top:1px solid rgba(255,255,255,.08);
+margin-top:50px;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:2.2rem;
+font-size:38px;
 }
 
 .hero h2{
-font-size:1.2rem;
+font-size:20px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.dashboard h3{
+font-size:24px;
 }
 
 }
@@ -184,9 +247,11 @@ font-size:1.2rem;
 
 <body>
 
-<header>
+<!-- HERO -->
 
 <div class="hero">
+
+<div>
 
 <img src="profile.jpg" alt="Shreya Gupta">
 
@@ -195,26 +260,26 @@ font-size:1.2rem;
 <h2>Data Analyst | SQL | Power BI | Tableau | Excel | Python</h2>
 
 <p>
-Data Analyst with hands-on experience in SQL, Tableau, Power BI and Advanced Excel.
-Skilled at dashboard creation, reporting, data cleaning and analysis. Passionate about
-transforming raw data into meaningful business insights.
+Transforming raw data into actionable business insights through dashboards,
+analytics and reporting. Passionate about solving business problems using
+SQL, Power BI, Tableau and Excel.
 </p>
 
-<div class="btn-container">
+<div class="buttons">
 
-<a href="resume.pdf" class="btn" download>
+<a href="resume.pdf" download class="btn primary">
 Download Resume
 </a>
 
 <a href="https://www.linkedin.com/in/shreya-gupta-bb3a03448"
 target="_blank"
-class="btn">
+class="btn secondary">
 LinkedIn
 </a>
 
 <a href="https://github.com/spg29d-bit"
 target="_blank"
-class="btn">
+class="btn secondary">
 GitHub
 </a>
 
@@ -222,28 +287,36 @@ GitHub
 
 </div>
 
-</header>
+</div>
+
+<!-- ABOUT -->
 
 <section>
+
+<div class="container">
 
 <h2 class="section-title">About Me</h2>
 
 <div class="about">
 
-<p>
-I enjoy solving business problems through data. My expertise includes SQL querying,
-dashboard design, reporting automation and business analytics. I've worked on multiple
-real-world projects including Netflix Content Analysis, Customer Support Performance
-Analysis, Uber Ride Analytics and HR Analytics dashboards.
-</p>
+Data Analyst with hands-on experience in SQL, Tableau, Power BI and Advanced Excel.
+Skilled in dashboard creation, data cleaning, reporting and business analytics.
+Experienced in transforming complex datasets into meaningful insights that support
+better decision-making and business performance.
+
+</div>
 
 </div>
 
 </section>
 
+<!-- SKILLS -->
+
 <section>
 
-<h2 class="section-title">Technical Skills</h2>
+<div class="container">
+
+<h2 class="section-title">Core Skills</h2>
 
 <div class="skills">
 
@@ -258,88 +331,57 @@ Analysis, Uber Ride Analytics and HR Analytics dashboards.
 
 </div>
 
+</div>
+
 </section>
+
+<!-- DASHBOARD SHOWCASE -->
 
 <section>
 
-<h2 class="section-title">Featured Projects</h2>
+<div class="container">
 
-<div class="projects">
+<h2 class="section-title">Dashboard Showcase</h2>
 
-<div class="project">
-
-<img src="netflix.png" alt="Netflix Dashboard">
+<div class="dashboard">
 
 <h3>Netflix Content Analysis</h3>
 
+<img src="netflix.png" alt="Netflix Dashboard">
+
 <p>
-Analyzed Netflix content using SQL queries, GROUP BY, CASE WHEN, LIKE, ORDER BY
-and Aggregate Functions. Built Power BI dashboards to identify content patterns,
-ratings trends and category performance.
+Analyzed Netflix content using SQL queries, GROUP BY, CASE WHEN, LIKE,
+ORDER BY and Aggregate Functions. Built Power BI dashboards to identify
+ratings trends, content distribution, genre popularity and release patterns.
 </p>
 
-<ul>
-<li>8800+ Content Records</li>
-<li>Genre Analysis</li>
-<li>Ratings Distribution</li>
-<li>Power BI Dashboard</li>
-</ul>
+<div class="tech-tags">
+<span>SQL</span>
+<span>Power BI</span>
+<span>Data Cleaning</span>
+<span>Dashboard Design</span>
+</div>
 
 </div>
 
-<div class="project">
-
-<img src="bpo.png" alt="BPO Dashboard">
+<div class="dashboard">
 
 <h3>Customer Support Performance Dashboard</h3>
 
+<img src="bpo.png" alt="Customer Support Dashboard">
+
 <p>
-Developed a Power BI dashboard to track Calls Handled, AHT, CSAT, SLA and Team
-Performance KPIs. Provided operational insights to improve performance.
+Developed an interactive Power BI dashboard to monitor Calls Handled,
+CSAT, SLA, AHT and Team Performance KPIs. Delivered operational insights
+to improve productivity and customer experience.
 </p>
 
-<ul>
-<li>922 Calls Analysed</li>
-<li>Agent Productivity</li>
-<li>CSAT Tracking</li>
-<li>AHT Monitoring</li>
-</ul>
-
+<div class="tech-tags">
+<span>SQL</span>
+<span>Power BI</span>
+<span>KPI Reporting</span>
+<span>Business Analytics</span>
 </div>
-
-<div class="project">
-
-<h3>Uber Ride Analytics</h3>
-
-<p>
-Analyzed ride trends, cancellation patterns, customer behavior and revenue
-performance using SQL queries and Power BI dashboards.
-</p>
-
-<ul>
-<li>Booking Trends</li>
-<li>Revenue Insights</li>
-<li>Demand Analysis</li>
-<li>Customer Behaviour</li>
-</ul>
-
-</div>
-
-<div class="project">
-
-<h3>HR Analytics Dashboard</h3>
-
-<p>
-Built employee attrition and department performance dashboards to identify
-workforce trends and improve retention strategies.
-</p>
-
-<ul>
-<li>Attrition Analysis</li>
-<li>Department KPIs</li>
-<li>Employee Insights</li>
-<li>Reporting Dashboard</li>
-</ul>
 
 </div>
 
@@ -347,7 +389,49 @@ workforce trends and improve retention strategies.
 
 </section>
 
+<!-- OTHER PROJECTS -->
+
 <section>
+
+<div class="container">
+
+<h2 class="section-title">Additional Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<h4>Uber Ride Analytics</h4>
+
+<p>
+Analyzed ride demand, booking trends, customer behavior, cancellations
+and revenue performance using SQL and Power BI dashboards.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h4>HR Analytics Dashboard</h4>
+
+<p>
+Built employee attrition, workforce and department performance dashboards
+to support data-driven HR decision-making.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section>
+
+<div class="container">
 
 <h2 class="section-title">Contact</h2>
 
@@ -362,10 +446,12 @@ workforce trends and improve retention strategies.
 <p>
 🔗
 <a href="https://www.linkedin.com/in/shreya-gupta-bb3a03448"
-style="color:#38bdf8;">
+style="color:#64ffda;">
 LinkedIn Profile
 </a>
 </p>
+
+</div>
 
 </div>
 
@@ -373,7 +459,7 @@ LinkedIn Profile
 
 <footer>
 
-<p>© 2026 Shreya Gupta | Data Analyst Portfolio</p>
+© 2026 Shreya Gupta | Data Analyst Portfolio
 
 </footer>
 
